@@ -1,3 +1,4 @@
+
 from openpyxl import Workbook
 wb=Workbook()
 ws= wb.active
@@ -29,6 +30,7 @@ ws["I1"]="성적"
 for r in range(2, ws.max_row+1):
     ws.cell(row=r,column=8).value = "=SUM(B{}:G{})".format(r,r)
 
+
 wb.save("scores.xlsx")   
 
 import win32com.client
@@ -40,7 +42,7 @@ def LoadExcelFunction():
     excel = win32com.client.Dispatch("Excel.Application")
     #임시 Workbook 객체 생성 및 엑셀 열기
     temp_wb = excel.Workbooks.Open(
-        r"C:\Users\ilheu\Desktop\py_rpa\1_exel\scores.xlsx")
+        r"C:\Users\donge\OneDrive\바탕 화면\pywork\py_rpa\1_exel\scores.xlsx")
     #저장
     temp_wb.Save()
     #excel 종료
