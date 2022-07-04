@@ -1,10 +1,10 @@
 import pyautogui
-w=pyautogui.getWindowsWithTitle("제목 없음")[0] 
+w=pyautogui.getWindowsWithTitle("제목 없음 - 메모장")[0] 
         # 메모장 1개 띠운상태에서 가져옴
 w.activate()
 
-# pyautogui.write("12345")
-# pyautogui.write("Nadocoding", interval= 0.25)
+pyautogui.write("12345")
+pyautogui.write("Nadocoding", interval= 0.25)
 # pyautogui.write("나도코딩") # 한글 안됨
 # pyautogui.write(["t","e","s","t","left","left","right","1","a","enter"],interval=0.25)
 
@@ -27,17 +27,17 @@ w.activate()
 
 # 한글 입력
 # pip install pyperclip
-import pyperclip
+# import pyperclip
 
-# pyperclip.copy("나도코딩") # 나도코딩 글자를 클립보드에저장
-# pyautogui.hotkey("ctrl","v")
+# # pyperclip.copy("나도코딩") # 나도코딩 글자를 클립보드에저장
+# # pyautogui.hotkey("ctrl","v")
 
-def my_write(text):
-    pyperclip.copy(text)
-    pyautogui.hotkey("ctrl","v")
+# def my_write(text):
+#     pyperclip.copy(text)
+#     pyautogui.hotkey("ctrl","v")
 
-my_write("함수만들어 입력")
+# my_write("함수만들어 입력")
 
-# 자동화 프로그램 종료
-# win : ctrl + alt + del
-# mac : cmd + shift + option + q
+# # 자동화 프로그램 종료
+# # win : ctrl + alt + del
+# # mac : cmd + shift + option + q
