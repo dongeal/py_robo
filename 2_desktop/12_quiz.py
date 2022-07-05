@@ -15,15 +15,18 @@ pyautogui.hotkey("win","r")
 pyautogui.sleep(0.2)
 pyautogui.write("mspaint")
 pyautogui.hotkey("enter")
-pyautogui.sleep(1)
+pyautogui.sleep(2)
 window=pyautogui.getWindowsWithTitle("제목 없음 - 그림판")[0]
 if window.isMaximized == False:
     window.maximize()
+    pyautogui.sleep(2)
+text_btn=pyautogui.locateOnScreen("btn_text.png")
+pyautogui.click (text_btn, duration=0.2)
 
-brush_btn= pyautogui.locateOnScreen("btn_brush.png")
-pyautogui.click(brush_btn,duration=0.2)
+brush_btn= pyautogui.locateOnScreen("btn_brush.png",confidence=0.8)
+pyautogui.click(brush_btn.left-200,brush_btn.top+200,duration=0.2)
 
-pyautogui.click(200,200, duration=0.2)
+# pyautogui.click(200,200, duration=0.2)
 
 def my_write(text):
     pyperclip.copy(text)
