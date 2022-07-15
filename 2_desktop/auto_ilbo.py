@@ -1,0 +1,53 @@
+import pyautogui
+import pyperclip
+
+def my_write(text):
+    pyperclip.copy(text)
+    pyautogui.hotkey("ctrl","v")
+
+pyautogui.hotkey("win","r")
+pyautogui.sleep(0.2)
+pyautogui.write(r"c:/HNC/Hwp70/Hwp.exe c:/work/iii.txt")
+pyautogui.hotkey("enter")
+pyautogui.sleep(1)
+pyautogui.click(700,500, duration=0.2)
+pyautogui.hotkey("ctrl","a")
+pyautogui.hotkey("F7")
+pyautogui.sleep(0.2)
+pyautogui.hotkey("alt","a")
+pyautogui.sleep(0.2)
+pyautogui.hotkey("alt","h")
+pyautogui.hotkey("0")
+pyautogui.hotkey("alt","f")
+pyautogui.hotkey("0")
+pyautogui.hotkey("alt","l")
+pyautogui.hotkey("1","5")
+pyautogui.hotkey("alt","r")
+pyautogui.hotkey("1","5")
+pyautogui.hotkey("alt","d")
+pyautogui.hotkey("alt","t")
+pyautogui.hotkey("alt","s")
+pyautogui.hotkey("tab")
+pyautogui.write("130")
+pyautogui.hotkey("alt","d")
+pyautogui.hotkey("alt","l")
+pyautogui.hotkey("alt","t")
+
+my_write("굴림체")
+pyautogui.hotkey("alt","d")
+pyautogui.hotkey("pagedown")
+pyautogui.hotkey("backspace")
+
+pyautogui.hotkey("alt","v")
+pyautogui.sleep(0.2)
+my_write("바")
+pyautogui.sleep(0.2)
+pyautogui.hotkey("alt","n")
+my_write("1영업일보")
+pyautogui.sleep(0.2)
+pyautogui.hotkey("alt","d")
+pyautogui.sleep(0.2)
+pyautogui.hotkey("y")
+
+pyautogui.hotkey("alt","x")
+
